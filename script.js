@@ -68,9 +68,20 @@ compare()
 // program 5
 // Write a js program to convert lowercase string to uppercase.
 function uppercase() {
-    var string1='usama azam'
+    var string1='usamA azam'
     var upper=string1.toUpperCase()
     console.log("After Conversion Into Uppercase: ",upper);
     
 }
 uppercase()
+
+
+// program 6
+// Write a js program to convert uppercase string to lowercase.
+function lowercase() {
+    var string1='Muhammad UsaMA'
+    var lower=string1.toLowerCase()
+    console.log("After Conversion Into Uppercase: ",lower);
+    
+}
+lowercase()
