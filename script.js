@@ -10,3 +10,13 @@ function lengthOfString() {
 }
 lengthOfString()
 
+
+// program 2
+// Write a js program to copy one string to another string.
+function copyString() {
+    var String='Muhammad Usama'
+    var copy=''
+    copy=String
+    console.log("Copy Of String Is ",copy);
+}
+copyString()
