@@ -16,7 +16,11 @@ lengthOfString()
 function copyString() {
     var String='Muhammad Usama'
     var copy=''
-    copy=String
-    console.log("Copy Of String Is ",copy);
+    var lengthof=String.length
+    lengthof=lengthof/2
+    var first=String.slice(0,lengthof)
+    var second=String.slice(lengthof+1,String.length)
+    copy=first+second
+    console.log("Copy Of String Is:",copy);
 }
 copyString()
