@@ -109,7 +109,7 @@ function check() {
       special++;
     }
   }
- 
+
   console.log(
     digit,
     "No Of Digits",
@@ -121,72 +121,102 @@ function check() {
 }
 check();
 
-
 // program 9
 // Write a js program to count total number of vowels and consonants in a string.
 function vowelNumbers() {
-    var string=' pakistan'
-    var vowl=consonant=0
-    for(let x=0;x<string.length;x++){
-        var char=string.charAt(x)
-         if (char=='a'||char=='A'||char=='e'||char=='E'||char=='i'||char=='I'||char=='o'||char=='O'||char=='u'||char=='U')
-          {
-             vowl++
-            }
-            else if(char>='a'||char>='A')
-            {
-                consonant++
-            }
-        }
-        console.log("Total Numbers Of Vowel In The String Is:",vowl)
-        console.log("Total Numbers Of Consonant In The String Is:",consonant)
+  var string = " pakistan";
+  var vowl = (consonant = 0);
+  for (let x = 0; x < string.length; x++) {
+    var char = string.charAt(x);
+    if (
+      char == "a" ||
+      char == "A" ||
+      char == "e" ||
+      char == "E" ||
+      char == "i" ||
+      char == "I" ||
+      char == "o" ||
+      char == "O" ||
+      char == "u" ||
+      char == "U"
+    ) {
+      vowl++;
+    } else if (char >= "a" || char >= "A") {
+      consonant++;
+    }
+  }
+  console.log("Total Numbers Of Vowel In The String Is:", vowl);
+  console.log("Total Numbers Of Consonant In The String Is:", consonant);
 }
-vowelNumbers()
+vowelNumbers();
 // program 10
 // Write a js program to count total number of words in a string
 
 function words() {
-    var string='That Is Called Logic @'
-    var pre=0
-    var word=1
-    for(let x=0;x<string.length;x++){
-        var char=string.charAt(x)
-        var next=string.charAt(x+1)
-        var len=string.length
-        if (len==0) {
-            console.log("String is EMpty");
+  var string = "That Is Called Logic @";
+  var pre = 0;
+  var word = 1;
+  for (let x = 0; x < string.length; x++) {
+    var char = string.charAt(x);
+    var next = string.charAt(x + 1);
+    var len = string.length;
+    if (len == 0) {
+      console.log("String is EMpty");
+    } else if ((len = !0)) {
+      if (char == " ") {
+      } else {
+        if (next == " " || x + 1 == string.length) {
+          pre = word;
+          word++;
         }
-        else if (len=!0) {
-         if (char==' ') {
-             
-         }
-            else {
-               if (next==' '||x+1==string.length) {
-                   pre=word
-                   word++
-               }
-           }
-        }
-    
+      }
     }
-    console.log("total Words",pre);
+  }
+  console.log("total Words", pre);
 }
-words()
-
+words();
 
 // program 11
 // Write a js program to find reverse of a string.
 
 function reverse() {
-    
-    var string='Usama'
-    var revers=''
-    var sav
-    for(let x=string.length;x>=0;x--)
-    {
-        sav=string.charAt(x)
-        revers=revers.concat(sav)
-    }
-    console.log("After Reverse The String:",revers);
+  var string = "Usama";
+  var revers = "";
+  var sav;
+  for (let x = string.length; x >= 0; x--) {
+    sav = string.charAt(x);
+    revers = revers.concat(sav);
+  }
+  console.log("After Reverse The String:", revers);
 }
-reverse()
+reverse();
+
+// program 12
+// Write a js program to check whether a string is palindrome or not.
+
+function palindrom() {
+  var string = "Pakistan";
+  var check = 0;
+  var rev = "";
+  var sav;
+  for (let x = string.length; x >= 0; x--) {
+    sav = string.charAt(x);
+    rev = rev.concat(sav);
+  }
+  for (let x = 0; x < string.length; x++) {
+    if (string.charAt(x) == rev.charAt(x)) {
+      check++;
+    }
+  }
+  if (check == string.length) {
+    console.log("Given String Is Palindrom:String=", string, ", Reverse=", rev);
+  } else {
+    console.log(
+      "Given String Is Not Palindrom:String=",
+      string,
+      ", Reverse=",
+      rev
+    );
+  }
+}
+palindrom();
