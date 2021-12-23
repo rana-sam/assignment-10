@@ -221,107 +221,132 @@ function palindrom() {
 }
 palindrom();
 
-
 // program 13
 // Write a js program to reverse order of words in a given string
 
 function wordReverse() {
-  var string='i love my country'
- var concate=''
- var word=''
- var y=string.length
-  for(let x=string.length-1;x>=0;x--)
-  {    
-    if (string.charAt(x)==' ') {
-      word=string.slice(x+1,y)
-      concate=concate.concat(word)
-      concate=concate.concat(" ")
-      y=x
-      
+  var string = "i love my country";
+  var concate = "";
+  var word = "";
+  var y = string.length;
+  for (let x = string.length - 1; x >= 0; x--) {
+    if (string.charAt(x) == " ") {
+      word = string.slice(x + 1, y);
+      concate = concate.concat(word);
+      concate = concate.concat(" ");
+      y = x;
     }
   }
-  if (y>=0) {
-    
-    word=string.slice(0,y)
-    concate=concate.concat(word)
+  if (y >= 0) {
+    word = string.slice(0, y);
+    concate = concate.concat(word);
   }
-  
 
-  console.log("Reverse Of String Words:",concate);
-
+  console.log("Reverse Of String Words:", concate);
 }
-wordReverse()
+wordReverse();
 
 // program 14
 // Write a js program to find first occurrence of a character in a given string
 
 function Occurrenc() {
-  var string='I Love Pakistan'
-  var occur
-  for(let x=0;x<string.length;x++){
-    if (x==0 && string.charAt(x)!=' ') {
-      occur=string.charAt(x)
-      break
-    }
-    else if (string.charAt(x)==' ' && x+1<string.length) {
-      if (string.charAt(x+1)!=' ') {
-        occur=string.charAt(x+1)
-        break
+  var string = "I Love Pakistan";
+  var occur;
+  for (let x = 0; x < string.length; x++) {
+    if (x == 0 && string.charAt(x) != " ") {
+      occur = string.charAt(x);
+      break;
+    } else if (string.charAt(x) == " " && x + 1 < string.length) {
+      if (string.charAt(x + 1) != " ") {
+        occur = string.charAt(x + 1);
+        break;
       }
     }
   }
-  console.log("first occurrence Character:",occur);  
+  console.log("first occurrence Character:", occur);
 }
-Occurrenc()
+Occurrenc();
 
 // program 14(Extra Logic)
 // Write a js program to find first occurrence of a character of word in a given string
 
 function Occurrence() {
-
-  var string='I Love Pakistan'
-  var occur=[]
-  for(let x=0;x<string.length;x++){
-    if (x==0 && string.charAt(x)!=' ') {
-      occur.push(string.charAt(x))
-    }
-    else if (string.charAt(x)==' ') {
-      if (string.charAt(x+1)!=' ' && x+1<string.length) {
-        occur.push(string.charAt(x+1))
+  var string = "I Love Pakistan";
+  var occur = [];
+  for (let x = 0; x < string.length; x++) {
+    if (x == 0 && string.charAt(x) != " ") {
+      occur.push(string.charAt(x));
+    } else if (string.charAt(x) == " ") {
+      if (string.charAt(x + 1) != " " && x + 1 < string.length) {
+        occur.push(string.charAt(x + 1));
       }
-      
     }
   }
-  console.log("first occurrence of a character in a given word of string:",occur);  
+  console.log(
+    "first occurrence of a character in a given word of string:",
+    occur
+  );
 }
-Occurrence()
-
+Occurrence();
 
 // program 15
 // Write a js program to find last occurrence of a character in a given string.
 
 function lastOccure() {
-  string=' i Love  Pakistan'
-  if (string.length==0) {
+  string = " i Love  Pakistan";
+  if (string.length == 0) {
     console.log("String Is Empty:");
-  }
-  else if (string.charAt(string.length-1)!=' ') {
-    console.log("last occurrence of a character in a given string is:",string.charAt(string.length-1));
-    
-  }
-  else{
-    
-    for(let x=string.length-1;x>=0;x--){
-      if (string.charAt(x)!=' ') {
-        console.log("last occurrence of a character in a given string is:",string.charAt(x));
-        break
-      }
-      else if (x==0) {
+  } else if (string.charAt(string.length - 1) != " ") {
+    console.log(
+      "last occurrence of a character in a given string is:",
+      string.charAt(string.length - 1)
+    );
+  } else {
+    for (let x = string.length - 1; x >= 0; x--) {
+      if (string.charAt(x) != " ") {
+        console.log(
+          "last occurrence of a character in a given string is:",
+          string.charAt(x)
+        );
+        break;
+      } else if (x == 0) {
         console.log("String Is Empty:");
       }
     }
-
   }
-  
 }
-lastOccure()
+lastOccure();
+
+// program 16
+// Write a js program to search all occurrences of a character in given string.
+
+// function allOccure() {
+//   var string = "i Love Pakistan is my country o";
+//   var array = [];
+//   var time = 1;
+//   var pus = 1;
+//   if (string.length==0) {
+//     console.log("String Is Empty.");
+//   }
+//   else{
+//     for (var x = 0; x < string.length; x++) {
+//       for(let y=0;y<=array.length;y++){
+//       if (string.charAt(x)==array[y]) {
+//         time++
+//       }
+//       else if (string.charAt(x)!=" ") {
+//         array.push(string.charAt(x))
+//         pus++
+//       }
+//     }
+//     if (time>1 && pus==1) {
+//       array[y]=array[y]+" Is Repeated"+time+"Times"
+//     }
+//       time=1
+//       pus=1
+//     }
+
+//   }
+//   console.log("All Characters Are:", array);
+// }
+// allOccure();
