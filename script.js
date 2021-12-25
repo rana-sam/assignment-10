@@ -320,24 +320,25 @@ lastOccure();
 // program 16
 // Write a js program to search all occurrences of a character in given string.
 
-function allOccure() {
+function Search() {
   var string = "i Love Pakistan is my country o";
-  var checke='i'
+  var checke='Pa'
+  var chelen= checke.length
   var count = 0;
   if (string.length==0) {
     console.log("String Is Empty.");
   }
   else{
     for (var x = 0; x < string.length; x++) {
-          if (string.charAt(x)== checke) {
+        var comp=string.slice(x,x+chelen)
+          if ( comp== checke) {
             count++
           }
     }
   }
-  console.log("Given Characters Accure:", count," Times");
+  console.log("Given Characters Matches:", count," Times In Given String");
 }
-allOccure();
-
+Search();
 
 
 
