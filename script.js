@@ -320,33 +320,24 @@ lastOccure();
 // program 16
 // Write a js program to search all occurrences of a character in given string.
 
-// function allOccure() {
-//   var string = "i Love Pakistan is my country o";
-//   var array = [];
-//   var time = 1;
-//   var pus = 1;
-//   if (string.length==0) {
-//     console.log("String Is Empty.");
-//   }
-//   else{
-//     for (var x = 0; x < string.length; x++) {
-//       for(let y=0;y<=array.length;y++){
-//       if (string.charAt(x)==array[y]) {
-//         time++
-//       }
-//       else if (string.charAt(x)!=" ") {
-//         array.push(string.charAt(x))
-//         pus++
-//       }
-//     }
-//     if (time>1 && pus==1) {
-//       array[y]=array[y]+" Is Repeated"+time+"Times"
-//     }
-//       time=1
-//       pus=1
-//     }
+function allOccure() {
+  var string = "i Love Pakistan is my country o";
+  var checke='i'
+  var count = 0;
+  if (string.length==0) {
+    console.log("String Is Empty.");
+  }
+  else{
+    for (var x = 0; x < string.length; x++) {
+          if (string.charAt(x)== checke) {
+            count++
+          }
+    }
+  }
+  console.log("Given Characters Accure:", count," Times");
+}
+allOccure();
 
-//   }
-//   console.log("All Characters Are:", array);
-// }
-// allOccure();
+
+
+
