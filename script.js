@@ -519,11 +519,10 @@ lastAccur('a')
 
 
 function allAccur(char) {
-  var string
+  var string,h
   var newstring=[]
   newstring[0]='i love pakistan.pakistan is my country'
   var g=0
-  var h
    for(let x=0;x<newstring[0].length;x++){
         if (newstring[g].charAt(x)==char) {
           {
@@ -535,6 +534,6 @@ function allAccur(char) {
       }
 
    string=newstring[newstring.length-1]
-      console.log("After Removing:",char,",New String Is:",string);
+      console.log("After Removing All:",char,",New String Is:",string);
     }
-allAccur('i')
+allAccur('a')
