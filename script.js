@@ -537,3 +537,37 @@ function allAccur(char) {
       console.log("After Removing All:",char,",New String Is:",string);
     }
 allAccur('a')
+
+
+// program 24
+// Write a js program to remove all repeated word from a given string.
+
+
+// function allword() {
+//   var string,h,word,check
+//   var newstring=[]
+//   newstring[0]='i love pakistan pakistan is myas country'
+//   var g=i=0
+//    for(let x=1;x<newstring[0].length;x++){
+
+//     for(let x=0;x<newstring[0].length;x++){
+//       if (newstring[0].charAt(x)==" " ||newstring[0].charAt(x)=="."||newstring[0].charAt(x)==",") {
+//         word=newstring[0].slice(i,x)
+//         i=x+1
+//       }  
+//      }
+//           check=newstring[g].slice(x,x+word.length)
+//         if (word==check) {
+      
+//             h=g
+//             g++
+//             newstring[g]=newstring[h].replace(check,"")
+//             console.log("yes");
+          
+//         }
+//       }
+
+//    string=newstring[newstring.length-1]
+//       console.log("After Removing repeated New String Is:",string);
+//     }
+// allword('')
