@@ -322,226 +322,207 @@ lastOccure();
 
 function Search() {
   var string = "i Love Pakistan is my country o";
-  var checke='Pa'
-  var chelen= checke.length
+  var checke = "Pa";
+  var chelen = checke.length;
   var count = 0;
-  if (string.length==0) {
+  if (string.length == 0) {
     console.log("String Is Empty.");
-  }
-  else{
+  } else {
     for (var x = 0; x < string.length; x++) {
-        var comp=string.slice(x,x+chelen)
-          if ( comp== checke) {
-            count++
-          }
+      var comp = string.slice(x, x + chelen);
+      if (comp == checke) {
+        count++;
+      }
     }
   }
-  console.log("Given Characters Matches:", count," Times In Given String");
+  console.log("Given Characters Matches:", count, " Times In Given String");
 }
 Search();
-
-
 
 // program 17
 // Write a js program to count occurrences of a character in given string
 function allOccure() {
   var string = "i Love Pakistan is my country o";
-  var checke='i'
+  var checke = "i";
   var count = 0;
-  if (string.length==0) {
+  if (string.length == 0) {
     console.log("String Is Empty.");
-  }
-  else{
+  } else {
     for (var x = 0; x < string.length; x++) {
-          if (string.charAt(x)== checke) {
-            count++
-          }
+      if (string.charAt(x) == checke) {
+        count++;
+      }
     }
   }
-  console.log("Given Characters Accour:", count," Times In Given String");
+  console.log("Given Characters Accour:", count, " Times In Given String");
 }
 allOccure();
-
-
 
 // program 18
 // Write a js program to find highest frequency character in a string.
 function highfrequency() {
-  var string='i Love Pakistan.pakistan is my county'
-  var frearray=[]
-  var fre,time,pre
-  var max=0
-  var count=0
-  for(let x=0;x<string.length;x++){
-    if (string.charAt(x)!=' ') {
-    for(let y=0;y<string.length;y++){
-        if (string.charAt(x)==string.charAt(y)) {
-               count++
-          }
+  var string = "i Love Pakistan.pakistan is my county";
+  var frearray = [];
+  var fre, time, pre;
+  var max = 0;
+  var count = 0;
+  for (let x = 0; x < string.length; x++) {
+    if (string.charAt(x) != " ") {
+      for (let y = 0; y < string.length; y++) {
+        if (string.charAt(x) == string.charAt(y)) {
+          count++;
         }
-        if (max<count) {
-          time=count
-          frearray.push(string.charAt(x))
-          pre=max
-          max=count
-        }
-        else if (max==count) {
-          frearray.push(string.charAt(x))
-        }
-        
-        count=0
-    }
+      }
+      if (max < count) {
+        time = count;
+        frearray.push(string.charAt(x));
+        pre = max;
+        max = count;
+      } else if (max == count) {
+        frearray.push(string.charAt(x));
+      }
 
+      count = 0;
+    }
   }
-  for(let z=0;z<frearray.length;z++){
-    for(let x=1;x<frearray.length;x++){
-      if (frearray[z]==frearray[x]) {
-        frearray.splice(x,1)
+  for (let z = 0; z < frearray.length; z++) {
+    for (let x = 1; x < frearray.length; x++) {
+      if (frearray[z] == frearray[x]) {
+        frearray.splice(x, 1);
       }
     }
   }
-  console.log("Frequency Of",frearray,"Is ",time);  
+  console.log("Frequency Of", frearray, "Is ", time);
 }
-highfrequency()
-
+highfrequency();
 
 // program 19
 // Write a js program to find lowest frequency character in a string.
 function lowfrequency() {
-  var string='i Love pakistan pakistan is my country'
-  var frearray=[]
-  var max,time,pre
-  max=1
-  var count=0
-  for(let x=0;x<string.length;x++){
-    if (string.charAt(x)!=' ') {
-    for(let y=0;y<string.length;y++){
-        if (string.charAt(x)==string.charAt(y)) {
-               count++
-          }
-          
+  var string = "i Love pakistan pakistan is my country";
+  var frearray = [];
+  var max, time, pre;
+  max = 1;
+  var count = 0;
+  for (let x = 0; x < string.length; x++) {
+    if (string.charAt(x) != " ") {
+      for (let y = 0; y < string.length; y++) {
+        if (string.charAt(x) == string.charAt(y)) {
+          count++;
         }
-        if (max>count) {
-          time=count
-          frearray.push(string.charAt(x))
-          pre=max
-          max=count
-        }
-        else if (max==count) {
-          time=count
-          frearray.push(string.charAt(x))
-        }
-        
-        count=0
-    }
+      }
+      if (max > count) {
+        time = count;
+        frearray.push(string.charAt(x));
+        pre = max;
+        max = count;
+      } else if (max == count) {
+        time = count;
+        frearray.push(string.charAt(x));
+      }
 
+      count = 0;
+    }
   }
-  for(let z=0;z<frearray.length;z++){
-    for(let x=z+1;x<frearray.length;x++){
-      if (frearray[z]==frearray[x]) {
-        frearray.splice(x,1)
+  for (let z = 0; z < frearray.length; z++) {
+    for (let x = z + 1; x < frearray.length; x++) {
+      if (frearray[z] == frearray[x]) {
+        frearray.splice(x, 1);
       }
     }
   }
-  console.log("Frequency Of",frearray,"Is ",time);  
+  console.log("Frequency Of", frearray, "Is ", time);
 }
-lowfrequency()
-
+lowfrequency();
 
 // program 20
 // Write a js program to count frequency of each character in a string
 function frequency() {
-  var string='i Love pakistan pakistan is my country'
-  var frearray=[]
-  var count=1
-  
-  for(let x=0;x<string.length;x++){
-    if(string.charAt(x)!=' '){
-          frearray.push(string.charAt(x))
-    }
+  var string = "i Love pakistan pakistan is my country";
+  var frearray = [];
+  var count = 1;
 
+  for (let x = 0; x < string.length; x++) {
+    if (string.charAt(x) != " ") {
+      frearray.push(string.charAt(x));
+    }
   }
-  for(let z=0;z<frearray.length;z++){
-    for(let x=z+1;x<frearray.length;x++){
-      if (frearray[z]==frearray[x]) {
-        frearray.splice(x,1)
-        count++
+  for (let z = 0; z < frearray.length; z++) {
+    for (let x = z + 1; x < frearray.length; x++) {
+      if (frearray[z] == frearray[x]) {
+        frearray.splice(x, 1);
+        count++;
       }
     }
-    console.log(frearray[z]," Is Repeated",count,"Times");
-    count=1
+    console.log(frearray[z], " Is Repeated", count, "Times");
+    count = 1;
   }
-}frequency()
-
+}
+frequency();
 
 // program 2
 // Write a js program to remove first occurrence of a character from string
 
 function firstAccur(char) {
-   var string='i love pakistan'
-    var start,end
-    var newstring=''
-   for(let x=0;x<string.length;x++){
-        if (string.charAt(x)==char) {
-          start=string.slice(0,x)
-          end=string.slice(x+1,string.length)
-          break
-        }
-   }
-   newstring=start.concat(end)
-   console.log("After Removing:",char,",New String Is:",newstring);
+  var string = "i love pakistan";
+  var start, end;
+  var newstring = "";
+  for (let x = 0; x < string.length; x++) {
+    if (string.charAt(x) == char) {
+      start = string.slice(0, x);
+      end = string.slice(x + 1, string.length);
+      break;
+    }
+  }
+  newstring = start.concat(end);
+  console.log("After Removing:", char, ",New String Is:", newstring);
 }
-firstAccur('a')
+firstAccur("a");
 
 // program 22
 // Write a js program to remove last occurrence of a character from string.
 
-
 function lastAccur(char) {
-   var string='i love pakistan'
-    var start,end
-    var newstring=''
-   for(let x=string.length;x>=0;x--){
-        if (string.charAt(x)==char) {
-          start=string.slice(0,x)
-          end=string.slice(x+1,string.length)
-          break
-        }
-      }
-      newstring=start.concat(end)
-      console.log("After Removing:",char,",New String Is:",newstring);
+  var string = "i love pakistan";
+  var start, end;
+  var newstring = "";
+  for (let x = string.length; x >= 0; x--) {
+    if (string.charAt(x) == char) {
+      start = string.slice(0, x);
+      end = string.slice(x + 1, string.length);
+      break;
+    }
+  }
+  newstring = start.concat(end);
+  console.log("After Removing:", char, ",New String Is:", newstring);
 }
-lastAccur('a')
-
+lastAccur("a");
 
 // program 23
 // Write a js program to remove all occurrences of a character from string.
 
-
 function allAccur(char) {
-  var string,h
-  var newstring=[]
-  newstring[0]='i love pakistan.pakistan is my country'
-  var g=0
-   for(let x=0;x<newstring[0].length;x++){
-        if (newstring[g].charAt(x)==char) {
-          {
-            h=g
-            g++
-            newstring[g]=newstring[h].replace(char,"")
-          }
-        }
+  var string, h;
+  var newstring = [];
+  newstring[0] = "i love pakistan.pakistan is my country";
+  var g = 0;
+  for (let x = 0; x < newstring[0].length; x++) {
+    if (newstring[g].charAt(x) == char) {
+      {
+        h = g;
+        g++;
+        newstring[g] = newstring[h].replace(char, "");
       }
-
-   string=newstring[newstring.length-1]
-      console.log("After Removing All:",char,",New String Is:",string);
     }
-allAccur('a')
+  }
 
+  string = newstring[newstring.length - 1];
+  console.log("After Removing All:", char, ",New String Is:", string);
+}
+allAccur("a");
 
 // program 24
 // Write a js program to remove all repeated word from a given string.
-
 
 // function allword() {
 //   var string,h,word,check
@@ -554,16 +535,16 @@ allAccur('a')
 //       if (newstring[0].charAt(x)==" " ||newstring[0].charAt(x)=="."||newstring[0].charAt(x)==",") {
 //         word=newstring[0].slice(i,x)
 //         i=x+1
-//       }  
+//       }
 //      }
 //           check=newstring[g].slice(x,x+word.length)
 //         if (word==check) {
-      
+
 //             h=g
 //             g++
 //             newstring[g]=newstring[h].replace(check,"")
 //             console.log("yes");
-          
+
 //         }
 //       }
 
