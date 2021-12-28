@@ -525,30 +525,42 @@ allAccur("a");
 // Write a js program to remove all repeated word from a given string.
 
 // function allword() {
-//   var string,h,word,check
-//   var newstring=[]
-//   newstring[0]='i love pakistan pakistan is myas country'
+//   var string,h,check
+//   var chnstring=[]
+//   newstring='i love pakistan pakistan is my country'
 //   var g=i=0
-//    for(let x=1;x<newstring[0].length;x++){
+//    for(let x=1;x<newstring.length;x++){
 
-//     for(let x=0;x<newstring[0].length;x++){
-//       if (newstring[0].charAt(x)==" " ||newstring[0].charAt(x)=="."||newstring[0].charAt(x)==",") {
-//         word=newstring[0].slice(i,x)
+//     for(let x=0;x<newstring.length;x++){
+//       if (newstring.charAt(x)==" ") {
+//        var word=newstring.slice(i,x)
 //         i=x+1
+//         console.log("yess");
+//         break
 //       }
 //      }
-//           check=newstring[g].slice(x,x+word.length)
-//         if (word==check) {
-
-//             h=g
-//             g++
-//             newstring[g]=newstring[h].replace(check,"")
-//             console.log("yes");
-
-//         }
+//      chnstring[x]=word
+//      chnstring[x]=chnstring[x].replace(newstring.search(word),"")    
 //       }
 
-//    string=newstring[newstring.length-1]
+//    string=chnstring[chnstring.length-1]
 //       console.log("After Removing repeated New String Is:",string);
 //     }
 // allword('')
+
+
+
+// program 25
+// Write a js program to replace first occurrence of a character with another in a string.
+
+function repelace(t,w) {
+  var string='i love my country pakistan'
+  for(let x=0;x<string.length;x++){
+    if (string.charAt(x)==t) {
+      var news=string.replace(t,w)
+      break
+    }
+  }
+  console.log("After Replacing ",t," With ",w," String is:",news);
+}
+repelace("i","You")
