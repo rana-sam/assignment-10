@@ -597,3 +597,25 @@ function repelaceAll(t,w) {
   console.log("After Replacing ",t," With ",w," String is:",news);
 }
 repelaceAll("a","x")
+
+
+// program 28
+// Write a js program to find first occurrence of a word in a given string.
+
+function firstWord(f) {
+  var string='I Love My Country Pakistan'
+ var array=string.split(" ")
+ var yess=0
+  for(let x=0;x<string.length;x++){
+         if (array[x]==f) {
+           console.log(f," Is Found At Index",x);
+           yess++
+           break
+         }
+  }
+  if (yess==0) {
+    
+    console.log("Given Word Is Not Found In STring");
+  }
+}
+firstWord("I")
