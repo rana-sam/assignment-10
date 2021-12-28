@@ -689,3 +689,28 @@ function countWord(word) {
      }
 }
 countWord("i")
+
+
+// program 32
+// Write a js program to remove first occurrence of a word from string.
+function removeWord(word) {
+  var string='i Love My Country i Pakistan'
+ var array=string.split(" ")
+ var index=[]
+ var yess=0
+  for(let x=0;x<array.length;x++){
+         if (array[x]==word) {
+           array.splice(x,1)
+           yess++
+           break
+          }
+        }
+      var news=array.join(" ")
+        if (yess>0) {
+    console.log("After Removing from first",word, ":",news); 
+     }
+     else{
+       console.log("Given Word Is Not Found In String");
+     }
+}
+removeWord("i")
