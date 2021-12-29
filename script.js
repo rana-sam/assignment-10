@@ -774,7 +774,7 @@ function trimSpace() {
     
   }
   var news=array.join(" ")
-  console.log("After Removing Leading space",news);
+  console.log("After Removing Leading space:",news);
   
 }
 trimSpace()
@@ -792,7 +792,17 @@ function trailingSpace() {
     
   }
   var news=array.join(" ")
-  console.log("After Removing Trailing space",news);
+  console.log("After Removing Trailing space:",news);
   
 }
 trailingSpace()
+
+// program 37
+// Write a js program to trim both leading and trailing white space characters from given string.
+ function trimBoth() {
+   var string='    I love my country pakistan      '
+   var news=string.trim()
+   console.log("After Removing Leading And Trailing White Space:",news);
+   
+ }
+ trimBoth()
