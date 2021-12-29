@@ -978,3 +978,32 @@ function subset() {
     console.log("Subset Of Given String Is:",array);
 }
 subset()
+
+
+// program 46
+// Write a JavaScript program to create a Clock.   
+// Note: The output will come every second.
+
+// function clock() {
+//   var d= Date.now()
+//   // var m=d.getMinutes()
+//   // var h=d.getHours()
+//   // var s=d.getSeconds()
+  
+//   console.log(d);
+  
+// }clock()
+
+
+// program 47
+// Write a JavaScript program to calculate the area and perimeter of a circle.   
+// Note : Create two methods to calculate the area and perimeter. The radius of the circle will be supplied by the user.
+
+function Areapara(r) {
+  var area=Math.PI*r*r
+  var para=Math.PI*2*r
+  console.log("Parimeter Of Circle:",para.toFixed(5));
+  console.log("Area Of Circle:",area.toFixed(5))
+  
+}
+Areapara(10)
