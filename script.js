@@ -524,29 +524,24 @@ allAccur("a");
 // program 24
 // Write a js program to remove all repeated word from a given string.
 
-// function allword() {
-//   var string,h,check
-//   var chnstring=[]
-//   newstring='i love pakistan pakistan is my country'
-//   var g=i=0
-//    for(let x=1;x<newstring.length;x++){
-
-//     for(let x=0;x<newstring.length;x++){
-//       if (newstring.charAt(x)==" ") {
-//        var word=newstring.slice(i,x)
-//         i=x+1
-//         console.log("yess");
-//         break
-//       }
-//      }
-//      chnstring[x]=word
-//      chnstring[x]=chnstring[x].replace(newstring.search(word),"")    
-//       }
-
-//    string=chnstring[chnstring.length-1]
-//       console.log("After Removing repeated New String Is:",string);
-//     }
-// allword('')
+function allword() {
+  var string='i love pakistan.pakistan is,my country.i like it is'
+  var newarray=[]
+  var array=string.split(".")
+  var news=array.join(" ")
+  newarray=news.split(",")
+  var news1=newarray.join(" ")
+  var newarray1=news1.split(" ")
+  for(let x=0;x<newarray1.length;x++){
+    for(let y=x+1;y<newarray1.length;y++)
+          if (newarray1[x]==newarray1[y]) {
+            newarray1.splice(y,1)
+          }
+  }
+  var result=newarray1.join(" ")
+  console.log("yesssssssss",result);
+    }
+allword()
 
 
 
@@ -933,3 +928,13 @@ function displayobj() {
   
 }
 displayobj()
+
+
+// program 43
+// Write a JavaScript program to get the volume of a Cylinder with four decimal places using object classes.   
+// Volume of a cylinder : V = πr2h
+// where r is the radius and h is the height of the cylinder.
+
+function voulune() {
+  
+}
