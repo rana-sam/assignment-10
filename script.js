@@ -935,6 +935,10 @@ displayobj()
 // Volume of a cylinder : V = πr2h
 // where r is the radius and h is the height of the cylinder.
 
-function voulune() {
-  
+function volum(h,r) {
+  var volume,result
+  volume=Math.PI*2*r*h
+  result=volume.toFixed(4)
+  console.log("Volume Of cylinder is:",result);
 }
+volum(5,6)
