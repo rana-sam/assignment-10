@@ -942,3 +942,21 @@ function volum(h,r) {
   console.log("Volume Of cylinder is:",result);
 }
 volum(5,6)
+
+// program 44
+// Write a Bubble Sort algorithm in JavaScript. 
+
+function bubleSort() {
+  var array=[6,4,0, 3,-2,1]
+   for(let x=0;x<array.length;x++){
+    for(let y=x+1;y<array.length;y++){
+      if (array[y]<array[x]) {
+        var sample=array[x]
+        array[x]=array[y]
+        array[y]=sample
+      }
+    }
+   }
+console.log(array);
+}
+bubleSort()
