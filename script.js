@@ -768,8 +768,9 @@ function trimSpace() {
   var string='       I love my country pakistan'
   var array=string.split(" ")
   for(let x=0;x<array.length;x++){
-    if (array[0]=="") {
-      array.shift()      
+    if (array[x]=="") {
+      array.shift()  
+      x--    
     }
     
   }
@@ -806,3 +807,22 @@ trailingSpace()
    
  }
  trimBoth()
+
+//  program 38
+// Write a js program to remove all extra blank spaces from given string.
+function extraSpace() {
+  var string='    I love Pakistan   is my country   '
+  var news=string.trim()
+  var array=news.split(" ")
+  for(let x=0;x<array.length;x++){
+
+    if (array[x]=="") {
+      array.splice(x,1)
+      x--
+    }
+  }
+  var result=array.join(" ")
+  console.log("After Removing All Extra White Space:",result);
+  
+}
+extraSpace()
