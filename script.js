@@ -1076,3 +1076,12 @@ function greater3C_O(){
    console.log(number1);
 }
 greater3C_O()
+
+// program 3
+// Write a js program to check whether a number is even or odd using conditional operator.
+function checkC_O() {
+  var num1=45
+  var chek=num1%2==0?num1+" is even":num1+" is odd"
+  console.log(chek);
+}
+checkC_O()
