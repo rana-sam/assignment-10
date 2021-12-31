@@ -1051,3 +1051,18 @@ allValue()
 
  }
  property('class')
+
+
+//                            Conditional Operator
+
+// program 1
+// Write a js program to find maximum between two numbers using conditional operator
+function greaterC_O() {
+  var num1=12
+var num2=22
+var greater=num1>num2 ? num1+" Is Greater" : num2+" Is Greater"
+console.log(greater);
+}
+greaterC_O()
+
+
