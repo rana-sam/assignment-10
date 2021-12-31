@@ -1265,3 +1265,29 @@ function Evenodd(x) {
   
 }
 Evenodd(9)
+
+// program 6
+// Write a js program to check whether a number is positive, negative or zero using switch case.
+function number1(x) {
+  
+  switch (x > 0) {
+    case true:
+      console.log(x," Is Positive Number");
+      break;
+    case false:
+      switch (x < 0) {
+        case true:
+          console.log(x," is Negative");
+          break;
+      
+        default:
+          console.log(x," is Zero");
+          break;
+      }
+      break;
+      default:
+        console.log("yess");
+        break;
+    }
+}
+number1(0)
